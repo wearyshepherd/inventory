@@ -80,6 +80,40 @@ body {
     font-size: 0.9rem;
     color: #555;
 }
+#barcode-scanner {
+    text-align: center;
+    margin: 20px auto;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    width: 320px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#barcode-scanner h3 {
+    color: #fa5b1c;
+}
+
+#barcode-scanner button {
+    margin-top: 10px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #fa5b1c;
+    color: #ffffff;
+}
+
+#barcode-scanner button:hover {
+    background-color: #989d96;
+}
+
+#scan-result {
+    margin-top: 15px;
+    font-family: 'Courier New', monospace;
+    color: #333;
+}
+
 
 /* Mobile responsiveness */
 @media (max-width: 768px) {
@@ -97,3 +131,4 @@ body {
         font-size: 1.5rem;
     }
 }
+
