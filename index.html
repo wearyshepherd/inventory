@@ -10,12 +10,16 @@
     <nav>
         <h1>Warehouse Inventory</h1>
         <button id="theme-toggle">Switch to Dark Theme</button>
+        <button id="export-inventory">Export to CSV</button>
     </nav>
 
     <main>
         <section class="scanner-section">
+            <h3>Barcode Scanner</h3>
             <button id="scan-btn">Start Barcode Scanner</button>
-            <div id="scanner-container"></div>
+            <video id="scanner-preview"></video>
+            <div id="scan-result"></div>
+            <button id="manual-entry">Manually Add Item</button>
         </section>
 
         <section class="inventory-section">
