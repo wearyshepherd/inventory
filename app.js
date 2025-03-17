@@ -21,14 +21,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         navigator.mediaDevices.getUserMedia({ video: { facingMode: "environment" } })
-            .then((stream) => {
-                scannerPreview.srcObject = stream;
-                scannerPreview.play();
-            })
-            .catch((err) => {
-                console.error("Camera access error:", err);
-                alert("Failed to access the camera. Please check permissions.");
-            });
+        .then(function(stream) {
+            let video = document.getElementById("scanner-preview");
+            video.srcObject = stream;
+            video.play();
+        })
+        .catch(function(err) {
+            console.error("Camera error: ", err);
+        });    
 
         Quagga.init({
             inputStream: {
