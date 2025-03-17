@@ -1,28 +1,35 @@
-const startBtn = document.getElementById("start-btn");
-const stopBtn = document.getElementById("stop-btn");
-const resultValue = document.getElementById("result-value");
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minimal Barcode Inventory</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="app-header">
+    <h1>Minimal Barcode Inventory</h1>
+  </header>
 
-const html5QrCode = new Html5Qrcode("reader");
-const qrCodeSuccessCallback = (decodedText, decodedResult) => {
-  resultValue.textContent = decodedText;
-  html5QrCode.stop().then(ignore => {
-    console.log("Scan complete.");
-  }).catch(err => console.log("Error stopping scanner:", err));
-};
+  <main class="inventory-container">
+    <section id="barcode-scanner">
+      <div id="reader"></div>
+      <p id="scan-result">Scanned Code: <span id="result-value">None</span></p>
+      <button id="start-btn">Start Scanner</button>
+      <button id="stop-btn">Stop Scanner</button>
+    </section>
 
-startBtn.addEventListener("click", () => {
-  html5QrCode.start(
-    { facingMode: "environment" }, // rear camera
-    {
-      fps: 10,
-      qrbox: { width: 250, height: 250 }
-    },
-    qrCodeSuccessCallback
-  ).catch(err => console.log("Unable to start scanning:", err));
-});
+    <section id="inventory-list">
+      <h3>Your Inventory</h3>
+      <ul id="items"></ul>
+    </section>
+  </main>
 
-stopBtn.addEventListener("click", () => {
-  html5QrCode.stop().then(() => {
-    console.log("Scanner stopped.");
-  }).catch(err => console.log("Error stopping scanner:", err));
-});
+  <footer class="app-footer">
+    <p>Designed by Carlos Chavez &copy; 2025</p>
+  </footer>
+
+  <script src="https://unpkg.com/html5-qrcode"></script>
+  <script src="app.js"></script>
+</body>
+</html>
