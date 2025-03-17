@@ -1,0 +1,88 @@
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #333;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.dark-mode {
+    background-color: #121212;
+    color: #fff;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+button {
+    background-color: #fa5b1c;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+#scanner-preview {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border: 2px solid #ddd;
+    display: block;
+    margin: 20px auto;
+    background: black;
+}
+
+.inventory-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: #f8f8f8;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dark-mode li {
+    background: #333;
+    color: white;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+
+.increase-btn {
+    background-color: #5cb85c;
+    color: white;
+}
+
+.decrease-btn {
+    background-color: #f0ad4e;
+    color: white;
+}
+
+.delete-btn {
+    background-color: #d9534f;
+    color: white;
+}
