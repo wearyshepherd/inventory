@@ -6,6 +6,17 @@
     <title>Minimal Inventory App</title>
     <link rel="stylesheet" href="style.css">
 </head>
+<section id="barcode-scanner">
+    <h3>Scan Barcode</h3>
+    <div id="reader" style="width:300px;"></div>
+    <p id="scan-result">Result: <span id="result-value">None</span></p>
+    <button id="start-btn">Start Scanning</button>
+    <button id="stop-btn">Stop Scanning</button>
+  </section>
+  
+  <script src="https://unpkg.com/html5-qrcode"></script>
+  <script src="barcode.js"></script> <!-- Our JS file for barcode logic -->
+  
 <body>
     <header class="app-header">
         <h1>Inventory Tracker</h1>
