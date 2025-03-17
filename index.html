@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimal Inventory App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="light-mode">
+    <nav>
+        <h1>Warehouse Inventory</h1>
+        <button id="theme-toggle">Switch to Dark Theme</button>
+    </nav>
+
+    <main>
+        <section class="scanner-section">
+            <!-- QuaggaJS injects the camera preview here -->
+            <h3>Barcode Scanner</h3>
+        </section>
+
+        <section class="inventory-section">
+            <h3>Inventory Items</h3>
+            <ul id="inventory-list"></ul>
+        </section>
+    </main>
+
+    <!-- QuaggaJS barcode scanning library -->
+    <script src="https://cdn.jsdelivr.net/npm/quagga/dist/quagga.min.js"></script>
+    <!-- Your custom app logic -->
+    <script src="app.js"></script>
+</body>
+
+</html>
