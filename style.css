@@ -86,3 +86,9 @@ button {
     background-color: #d9534f;
     color: white;
 }
+video {
+    width: 100%;
+    height: auto;
+    display: block;
+    background: black;
+}
